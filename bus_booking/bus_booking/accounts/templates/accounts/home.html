@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Welcome to Bus Booking System</h2>
+{% if user.is_authenticated %}
+    <p>Hello, {{ user.username }}! <a href="{% url 'dashboard' %}">Go to Dashboard</a></p>
+{% else %}
+    <a href="{% url 'login' %}">Login</a> | <a href="{% url 'register' %}">Register</a>
+{% endif %}
+{% endblock %}

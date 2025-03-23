@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Passenger Dashboard</h2>
+<p>Welcome, {{ user.username }}!</p>
+<a href="{% url 'wallet_view' %}">View Wallet</a>
+<a href="{% url 'available_seats' bus_id=1 %}">Book a Bus</a>  <!-- Example -->
+<a href="{% url 'logout' %}">Logout</a>
+{% endblock %}

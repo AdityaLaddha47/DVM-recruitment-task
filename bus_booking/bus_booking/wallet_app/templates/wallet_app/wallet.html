@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Wallet{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>My Wallet</h2>
+    <p>Current Balance: <strong>₹{{ wallet.balance }}</strong></p>
+    <a href="{% url 'add_money' %}" class="btn btn-primary">Add Money</a>
+</div>
+{% endblock %}
